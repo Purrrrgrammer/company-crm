@@ -1,13 +1,16 @@
-﻿namespace CompanyCRM.Views
+﻿using CompanyCRM.MVVM.ViewModels;
+
+namespace CompanyCRM.MVVM.Views
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow
     {
-        public MainWindow()
+        public MainWindow(MainViewModel viewModel)
         {
             InitializeComponent();
+            DataContext = viewModel;
         }
     }
 }
